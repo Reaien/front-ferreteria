@@ -1,10 +1,22 @@
-import React from "react";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./componentes/Navbar";
+import Footer from "./componentes/Footer";
+import { PruebaCards } from "./componentes/PruebaCards";
+import Reviews from "./componentes/Reviews";
 
-export const App = () => {
+function App() {
   return (
     <>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <PruebaCards />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </>
   );
-};
+}
+
+export default App;

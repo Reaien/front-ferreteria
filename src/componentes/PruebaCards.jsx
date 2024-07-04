@@ -4,14 +4,13 @@ import { TableCompras } from "./TableCompras";
 
 export const PruebaCards = () => {
   const [tablaCompras, setTablaCompras] = useState(false);
-  const [tablaOrdenes, setTablaOrdenes] = useState(false);
 
   return (
     <section>
-      <div className="flex justify-center mt-52 ">
+      <div className="flex justify-center mt-52 text-center">
         <CardComponent
-          title="Consultar Herramientas y stock"
-          description="Revisa el stock de herramientas"
+          title="Administrar Herramientas y stock"
+          description="Revisa el stock de herramientas, agrega edita o elimina productos"
           buttonText="Consultar"
           onClick={() => {
             setTablaCompras(true);

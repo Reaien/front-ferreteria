@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Modal } from "./Modal";
-import ModalLogin from "./ModalLogin";
 
 function Navbar() {
   const [showModal, setShowModal] = useState(false);

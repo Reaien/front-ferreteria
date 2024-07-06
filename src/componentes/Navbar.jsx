@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showModal, setShowModal] = useState(false);
@@ -20,19 +21,22 @@ function Navbar() {
   return (
     <nav className="bg-cyan-700 border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+        <Link
+          to="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             Ferretería Franquito
           </span>
-        </a>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
+        </Link>
+        <div className="flex  md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <Link
+            to="/crud"
             type="button"
-            className="text-white focus:outline-none font-medium rounded-lg px-4 py-2 text-center"
-            onClick={toggleLoginModal}
+            className="text-white font-extrabold focus:outline-none rounded-lg px-4 py-2 text-center"
           >
-            Iniciar Sesión
-          </button>
+            Admin CRUD
+          </Link>
           <button
             data-collapse-toggle="navbar-cta"
             type="button"
@@ -61,27 +65,7 @@ function Navbar() {
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-cta"
-        >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700rounded md:bg-transparent "
-                aria-current="page"
-              >
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contacto"
-                className="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent "
-              >
-                Contacto
-              </a>
-            </li>
-          </ul>
-        </div>
+        ></div>
       </div>
     </nav>
   );
